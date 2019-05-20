@@ -1,5 +1,5 @@
 #include "../SfmlEngine.hpp"
 
-sf::Font SfmlEngine::getFont() {
-    return fnt1;
+sf::Font SfmlEngine::getFont(int i) {
+    return fnt[i];
 }

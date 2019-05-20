@@ -13,4 +13,6 @@ SfmlEngine::SfmlEngine() {
 	}
 	
 	gameType = 0;
+	
+	readSettings();
 }

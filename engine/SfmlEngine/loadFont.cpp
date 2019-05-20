@@ -1,13 +1,19 @@
 #include "../SfmlEngine.hpp"
 
 void SfmlEngine::loadFont() {
-    if (!fnt1.loadFromFile("UbuntuMono-B.ttf")) {
+    sf::Font tmp;
+    if (!tmp.loadFromFile("../fnt/UbuntuMono-B.ttf")) {
         std::cout << "Error loading font" << std::endl;
+    } else {
+        fnt.push_back(tmp);
     }
 }
 
 void SfmlEngine::loadFont(std::string fntName) {
-    if (!fnt1.loadFromFile(fntName)) {
+    sf::Font tmp;
+    if (!tmp.loadFromFile(fntName)) {
         std::cout << "Error loading font" << std::endl;
+    } else {
+        fnt.push_back(tmp);
     }
 }

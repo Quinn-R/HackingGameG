@@ -8,22 +8,17 @@ int main() {
 	SfmlEngine eng;
 	
 	eng.loadFont();
-	//end.getFont();
-	
-	std::vector<Character> chars;
-	chars.push_back(Character("player1", sf::Vector2f(32, 32), sf::Vector2f(0, 0), sf::Color(252, 78, 162), 1, 100));
-	
-	std::vector<sf::RectangleShape> objectShapes;
-	objectShapes.push_back(chars[0].getShape());
+	//eng.getFont();
 	
 	while(eng.isOpen()) {
 		eng.events();
 		eng.update();
 
 		eng.clear(sf::Color::Black);
-		eng.drawEntity(objectShapes);
 		eng.display();
 	}
+	
+	eng.readFile("../settings.txt");
 
 	return 0;
 }

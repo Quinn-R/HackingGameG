@@ -11,14 +11,15 @@ private:
 	sf::View view;
 	
 	std::vector<int> moves; // left, right, up, down
+	std::vector<sf::Font> fnt;
+	std::vector<std::string> fileIn;
+	std::vector<std::string> settings;
 	
 	sf::Clock clock;
     sf::Time dt;
 	float dtAsSeconds;
 	
 	int gameType;
-	
-	sf::Font fnt1;
 	
 public:
 	
@@ -45,7 +46,11 @@ public:
 	
 	void loadFont();
 	void loadFont(std::string fntName);
-	sf::Font getFont();
+	sf::Font getFont(int i);
+	
+	void readFile(std::string a);
+	void readSettings();
+	void execSettings();
 };
 
 #endif
